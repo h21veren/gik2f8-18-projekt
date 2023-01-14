@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon" />
+    <title>Filmbutiken</title>
+</head>
+
+<body>
+    <main id="root"
+        class="flex flex-col bg-fuchsia-300 min-h-screen bg-[url('https://images.pexels.com/photos/2398354/pexels-photo-2398354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')]">
+        <div class="h-36 bg-zinc-900 flex justify-center items-center">
+            <h1 class="text-7xl text-pink-800">Filmbutiken</h1>
+        </div>
+        <div class="flex flex-1 pt-10 justify-center items-center">
+            <section class="flex gap-10 w-full xl:w-4/5 mx-2 xl:mx-auto bg-white bg-opacity-95 p-5 rounded-lg">
+                <section class="flex-1">
+                    <h2 class="mb-6 text-3xl text-fuchsia-900">Lägg till en film</h2>
+                    <form id="movieForm" name="movieForm">
+                        <section class="mb-2">
+                            <label class="block pr-5 mb-2 text-xl" for="image">Bild</label>
+                            <p class="message text-sm text-red-700 mb-2 hidden">
+                                Error message
+                            </p>
+                            <input type="text" id="image" name="image"
+                                class="w-full rounded-md border-gray-500 border-2 focus-within:outline-none focus:border-gray-600 px-4 py-2" />
+                        </section>
+                        <section class="mb-2">
+                            <label class="block pr-5 mb-2 text-xl" for="title">Titel</label>
+                            <p class="message text-sm text-red-700 mb-2 hidden">
+                                Error message
+                            </p>
+                            <input type="text" id="title" name="title"
+                                class="w-full rounded-md border-gray-500 border-2 focus-within:outline-none focus:border-gray-600 px-4 py-2" />
+                        </section>
+                        <section class="mb-2">
+                            <label class="block pr-5 mb-2 text-xl" for="actors">Skådespelare</label>
+                            <p class="message text-sm text-red-700 mb-2 hidden">
+                                Error message
+                            </p>
+                            <input type="text" id="actors" name="actors"
+                                class="w-full rounded-md border-gray-500 border-2 focus-within:outline-none focus:border-gray-600 px-4 py-2" />
+                        </section>
+                        <section class="mb-2">
+                            <label class="block pr-5 mb-2 text-xl" for="genre">Genre</label>
+                            <p class="message text-sm text-red-700 mb-2 hidden">
+                                Error message
+                            </p>
+                            <input type="text" id="genre" name="genre"
+                                class="w-full rounded-md border-gray-500 border-2 focus-within:outline-none focus:border-gray-600 px-4 py-2" />
+                        </section>
+                        <section class="mb-2">
+                            <label class="block pr-5 mb-2 text-xl" for="description">Beskrivning</label>
+                            <p class="message text-sm text-red-700 mb-2 hidden">
+                                Error message
+                            </p>
+                            <textarea maxlength="500" rows="5" id="description" name="description"
+                                class="resize-none w-full rounded-md border-gray-500 border-2 focus-within:outline-none focus:border-gray-600 px-4 py-2"></textarea>
+                        </section>
+                        <section class="mb-2">
+                            <label class="block pr-5 mb-2 text-xl" for="releaseDate">Release date</label>
+                            <p class="message text-sm text-red-700 mb-2 hidden">
+                                Error message
+                            </p>
+                            <input type="date" id="releaseDate" name="releaseDate"
+                                class="w-full rounded-md border-gray-500 border-2 focus-within:outline-none focus:border-gray-600 px-4 py-2" />
+                        </section>
+                        <button name="submitMovieForm"
+                            class="rounded-md bg-gray-500 hover:bg-gray-400 text-white px-4 py-1" type="submit">
+                            Spara
+                        </button>
+                    </form>
+                </section>
+                <section class="flex-1 px-5">
+                    <h2 class="mb-6 text-3xl text-fuchsia-900">Filmutbud</h2>
+                    <div id="movieList" class="grid grid-cols-2 gap-2">
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <script src="Api.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
