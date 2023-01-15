@@ -1,4 +1,4 @@
-/* I app.js we make a server and have routes for our CRUD operations here*/
+/* cd server för att ställa oss i mappen, npm run dev för att köra servern*/
 
 const express = require('express');
 const fs = require('fs/promises');
